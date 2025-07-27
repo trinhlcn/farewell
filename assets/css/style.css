@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ffd6e0, #ffeecf, #d9faff);
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('/assets/img/background-cat-1.gif');
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  font-size: 32px;
+  color: #c9184a;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #6c757d;
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #888;
+}
+
+.sparkle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: #ffd6e0;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: float 6s infinite ease-in-out;
+}
+
+@media (max-width: 600px) {
+  .envelope {
+    width: 90%;
+    height: 100px;
+  }
+
+  .flap {
+    height: 50px;
+  }
+
+  .letter-icon {
+    font-size: 36px;
+    margin-top: 30px;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 16px;
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+
+  body {
+    /* padding: 20px; */
+    background-size: 100% 100%;
+    background-image: url('/assets/img/background-mb.gif');
+  }
+}

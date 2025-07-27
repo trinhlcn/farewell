@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (name) {
     const header = document.getElementById("receiverName");
     header.textContent = `Gửi ${name} thân mến,`;
-
+    const lowerName = name.toLowerCase();
     if (/^anh\s/i.test(name.trim())) {
       const nameRef1 = document.querySelectorAll(".nameRef");
       const nameRef2 = document.getElementById("nameRef2");

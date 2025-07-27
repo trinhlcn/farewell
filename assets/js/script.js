@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     header.textContent = `Gửi ${decodeURIComponent(name)} thân mến,`;
 
     const lowerName = name.toLowerCase();
-    if (lowerName.includes("anh")) {
+    if (/^anh\s/i.test(name.trim())) {
       const nameRef1 = document.querySelectorAll(".nameRef");
       const nameRef2 = document.getElementById("nameRef2");
       const paragraph = document.querySelectorAll(".paragraph");
@@ -21,6 +21,23 @@ document.addEventListener("DOMContentLoaded", function () {
       if (paragraph){
         paragraph.forEach(p => {
           p.innerHTML = p.innerHTML.replace(/bạn/g, "anh");
+        });
+      }
+    }
+    else if (/^chị\s/i.test(name.trim())) {
+      const nameRef1 = document.querySelectorAll(".nameRef");
+      const nameRef2 = document.getElementById("nameRef2");
+      const paragraph = document.querySelectorAll(".paragraph");
+
+      if (nameRef1){
+        nameRef1.forEach(p => {
+          p.innerHTML = p.innerHTML.replace(/Trinh/g, "Em");
+        });
+      }
+      if (nameRef2) nameRef2.textContent = "em";
+      if (paragraph){
+        paragraph.forEach(p => {
+          p.innerHTML = p.innerHTML.replace(/bạn/g, "chị");
         });
       }
     }

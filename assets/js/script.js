@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const name = params.get("to");
 
   if (name) {
+    localStorage.setItem("toName", name);
+    // 🪄 
+    history.replaceState({}, document.title, window.location.pathname);
+  } else {
+    name = localStorage.getItem("toName");
+  }
+
+  if (name) {
     const header = document.getElementById("receiverName");
     header.textContent = `Gửi ${decodeURIComponent(name)} thân mến,`;
 

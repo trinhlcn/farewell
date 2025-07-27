@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get("to");
+  let params = new URLSearchParams(window.location.search);
+  let name = params.get("to");
 
   if (name) {
+    name = decodeURIComponent(name.trim());
     localStorage.setItem("toName", name);
     // 🪄 
     history.replaceState({}, document.title, window.location.pathname);
@@ -12,9 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (name) {
     const header = document.getElementById("receiverName");
-    header.textContent = `Gửi ${decodeURIComponent(name)} thân mến,`;
+    header.textContent = `Gửi ${name} thân mến,`;
 
-    const lowerName = name.toLowerCase();
     if (/^anh\s/i.test(name.trim())) {
       const nameRef1 = document.querySelectorAll(".nameRef");
       const nameRef2 = document.getElementById("nameRef2");

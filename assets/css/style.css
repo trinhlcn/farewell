@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url('/assets/img/background-cat-1.gif');
+  background-image: url('https://trinhlcn.github.io/farewell/assets/img/background-cat-1.gif');
 }
 
 .card {
@@ -95,6 +95,6 @@ p {
   body {
     /* padding: 20px; */
     background-size: 100% 100%;
-    background-image: url('/assets/img/background-mb.gif');
+    background-image: url('https://trinhlcn.github.io/farewell/assets/img/background-mb.gif');
   }
 }
